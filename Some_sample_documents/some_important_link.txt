@@ -1,0 +1,11 @@
+Link for online updating files 
+
+1. This file consist of Pharmacy Management System.doc file 
+
+https://docs.google.com/document/d/108Jegr7MpRydI0FWhPl6rsYL1ElpcDDu-4sE9Hd7I48/edit
+
+2. Draw.io site link -> This file consist of PMS_uml diagram link 
+
+https://app.diagrams.net/?libs=general;uml#LPMS.drawio
+
+
