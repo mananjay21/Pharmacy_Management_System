@@ -4,7 +4,7 @@ import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 import { isEmail } from "validator";
 import { Link } from "react-router-dom";
-import Navbar_beforeLogin from "./Navbar_beforeLogin";
+import Navbar_beforelogin from "./Navbar_beforelogin";
 import { useEffect } from "react";
 import './login.css'
 import orderService from "../services/orderService";
