@@ -7,7 +7,11 @@ import { Sign_img } from "./components/Sign_img";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./App.css";
-import { FaHome, FaUserPlus, FaSignInAlt } from "react-icons/fa";
+
+
+
+
+
 import { GrLogin } from "react-icons/gr";
 import Login from "./components/login.component";
 import Register from "./components/register.component";
@@ -22,6 +26,10 @@ import Landingpage from "./components/Landingpage";
 import Aboutus from "./components/Aboutus";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
+import ListDrugs from "./components/ListDrugs";
+import ViewDrugs from "./components/viewdrugs";
+import CreateDrugComponent from "./components/createdrugs";
+import AddOrder from "./components/createOrder";
 
 class App extends Component {
   constructor(props) {
@@ -72,13 +80,18 @@ class App extends Component {
           
       
                 <Switch>
-                  <Route exact path={["/", "/login"]} component={Login} />
+                  
                   <Route exact path="/login" component={Login} />
                   <Route exact path="/register" component={Register} />
-                  <Route exact path="/profile" component={Profile} />
+                  <Route exact path="/profile" component={Landingpage} />
                   <Route exact path="/user" component={User} />
-                  <Route exact path="/Home" component={Home}/>
-                
+                  <Route exact path="/" component={Home}/>
+                  <Route exact path="/Landingpage" component={Landingpage}/>
+                  <Route exact path="/aboutus" component={Aboutus} />
+                  <Route exact path="/AddOrder" component={AddOrder}/>
+                  <Route path = "/drugs" exact component = {ListDrugs}></Route>
+                  <Route path = "/view-drug/:id" component = {ViewDrugs}></Route>
+                  <Route exact path="/add-drug/:id" component={CreateDrugComponent} />
                 </Switch>
         
         <Footer />

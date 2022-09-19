@@ -21,13 +21,14 @@ label {
 
 .btn{
   background-color:rgb(65, 185, 129, 1);
+  /* padding-left: 0px; */
 }
 .btn :hover{
-  background-color:rgb(59, 168, 117);
+  background-color:rgb(10, 10, 10);
 }
 
 .btn_footer{
-  background-color:rgb(10, 12, 11);
+  background-color:rgb(10, 12, 11); 
 }
 
 .btn_footer:hover{

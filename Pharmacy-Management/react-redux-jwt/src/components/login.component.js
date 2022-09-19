@@ -182,13 +182,13 @@ export default connect(mapStateToProps)(Login);
 */
 
 import React, { Component } from "react";
-import { Redirect } from 'react-router-dom';
+import { Redirect } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 import Navbar_beforelogin from "./Navbar_beforelogin";
-import './login.css'
+import "./login.css";
 
 import { connect } from "react-redux";
 import { login } from "../actions/auth";
@@ -242,7 +242,6 @@ class Login extends Component {
 
     if (this.checkBtn.context._errors.length === 0) {
       dispatch(login(this.state.username, this.state.password))
-     
         .then(() => {
           history.push("/profile");
           //   window.location.reload();
@@ -251,8 +250,7 @@ class Login extends Component {
         })
         .catch(() => {
           this.setState({
-            loading: false
-
+            loading: false,
           });
         });
     } else {
@@ -271,9 +269,7 @@ class Login extends Component {
 
     return (
       <div>
-
-        <Navbar_beforelogin/>
-        
+        <Navbar_beforelogin />
 
         <Form
           onSubmit={this.handleLogin}
@@ -281,48 +277,64 @@ class Login extends Component {
             this.form = c;
           }}
         >
+          <div className="container-fluid col-md-12" style={{ marginTop: "0px" }}>
+           
+              <div
+                className="d-none d-md-flex col-md-6 col-lg-6 bg-image"
+                style={{ marginLeft: "-50px", marginTop: "30px",marginRight: "0px",marginBottom:"50px" }}
+              >
 
-
-
-
-          <div className="container-fluid ps-md-0" style={{ marginTop: "0px" }}>
-            <div className="row g-0">
-              <div className="d-none d-md-flex col-md-2 col-lg-5 bg-image"style={{ marginLeft: "100px" , marginTop:"80px"}}></div>
-
-              <div className="col-md-8 col-lg-6">
+              <div className="col-md-12 col-lg-12" style={{marginLeft:"600px",marginTop:"-60px"}}>
                 <div className="login d-flex align-items-center py-5">
-
-
                   <div className="container ">
                     <div className="row">
-                      <div className="col-md-9 col-lg-8 mx-auto my-container">
-                        <h3 className="login-heading mb-4" >Welcome back!</h3>
+                      <div className="col-md-9 col-lg-12 mx-auto my-container">
+                        <h3 className="login-heading mb-4">Welcome back!</h3>
 
                         <div className="form-floating mb-3">
-                          <Input type="text" className="form-control" placeholder="name@example.com" name="username" value={this.state.username}
-                            onChange={this.onChangeUsername} validations={[required]}
+                          <Input
+                            type="text"
+                            className="form-control"
+                            placeholder="name@example.com"
+                            name="username"
+                            value={this.state.username}
+                            onChange={this.onChangeUsername}
+                            validations={[required]}
                           />
                           {/* <label htmlFor="floatingPassword">Password</label> */}
-
                         </div>
                         <div className="form-floating mb-3">
-                          <Input type="password" className="form-control" placeholder="Password" name="password" value={this.state.password}
-                            onChange={this.onChangePassword} validations={[required]} />
+                          <Input
+                            type="password"
+                            className="form-control"
+                            placeholder="Password"
+                            name="password"
+                            value={this.state.password}
+                            onChange={this.onChangePassword}
+                            validations={[required]}
+                          />
                           {/* <label htmlFor="floatingPassword">Password</label> */}
                         </div>
                         <div className="d-grid">
-                          <button className="btn btn-lg btn-primary btn-login mb-2" type="submit" disabled={this.state.loading}>
+                          <button
+                            className="btn btn-lg btn-primary btn-login mb-2"
+                            type="submit"
+                            disabled={this.state.loading}
+                          >
                             {this.state.loading && (
                               <span className="spinner-border spinner-border-sm"></span>
                             )}
                             <span>Login</span>
                           </button>
 
-
-
                           <div className="text-center">
                             {/* <a className="small me-2" href="!#">Forgot password?</a> */}
-                            <Link to="/register" style={{ textDecoration: "none" }}><span id="register-here">Register with us?</span></Link>
+                            <Link
+                              to="/register"
+                              style={{ textDecoration: "none" }}
+                            >
+                              <span id="register-here">Register with us?</span>
+                            </Link>
                           </div>
                         </div>
                         {/* <div className="text-center mt-2" style={{color: 'red', minHeight: '25px'}} dangerouslySetInnerHTML={{__html: error}} /> */}
@@ -343,23 +355,17 @@ class Login extends Component {
                             this.checkBtn = c;
                           }}
                         />
-
-
-
                       </div>
                     </div>
                   </div>
                 </div>
-                
               </div>
             </div>
-          </div>
+            </div>
         </Form>
 
         {/* <hr class="my-5" /> */}
-
       </div>
-
     );
   }
 }
@@ -369,7 +375,7 @@ function mapStateToProps(state) {
   const { message } = state.message;
   return {
     isLoggedIn,
-    message
+    message,
   };
 }
 

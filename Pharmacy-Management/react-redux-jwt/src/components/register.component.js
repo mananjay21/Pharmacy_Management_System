@@ -146,16 +146,10 @@ class Register extends Component {
           }}
         >
          
-        <div className="container-fluid ps-md-0" style={{ marginTop: "0px" }}>
-            
-            
-            
-            
-      
+        <div className="container-fluid ps-md-12" style={{ marginTop: "0px" }}>
         
-
-        <div className="col-md-4 bg-image" style={{ margin: "50px" }}>
-          <div className="col-md-12 card bg-light text-dark" style={{ marginLeft: "700px" }} >
+        <div className="col-md-6 bg-image" style={{ marginLeft:"-50px", marginTop: "50px" , marginBottom:"50px"}}>
+          <div className="col-md-12 card bg-light text-dark" style={{ marginLeft: "600px" }} >
             <h1>
               <center>User Registration </center>
             </h1>
