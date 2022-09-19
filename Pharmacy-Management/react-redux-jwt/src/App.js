@@ -30,7 +30,6 @@ import ListDrugs from "./components/ListDrugs";
 import ViewDrugs from "./components/viewdrugs";
 import CreateDrugComponent from "./components/createdrugs";
 import AddOrder from "./components/createOrder";
-import DrugsList from
 
 class App extends Component {
   constructor(props) {
@@ -90,11 +89,7 @@ class App extends Component {
                   <Route exact path="/Landingpage" component={Landingpage}/>
                   <Route exact path="/aboutus" component={Aboutus} />
                   <Route exact path="/AddOrder" component={AddOrder}/>
-                  <Route path = "/Drugs" exact component = {ListDrugs}></Route>
-                  <Route path = "/Drugs2" exact component = {DrugsList}></Route>
-                  <Route path = "/Order" exact component = {createOrder}></Route>
-                  <Route path = "/Orders" exact component = {ListOrders}></Route>
-                  
+                  <Route path = "/drugs" exact component = {ListDrugs}></Route>
                   <Route path = "/view-drug/:id" component = {ViewDrugs}></Route>
                   <Route exact path="/add-drug/:id" component={CreateDrugComponent} />
                 </Switch>

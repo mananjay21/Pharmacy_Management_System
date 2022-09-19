@@ -7,10 +7,10 @@ import { Link } from "react-router-dom";
 import Navbar_beforelogin from "./Navbar_beforelogin";
 import { useEffect } from "react";
 import './login.css'
-import orderService from "../services/orderService";
+import OrderService from "../services/OrderService";
 
 import { connect } from "react-redux";
-import Navbar from "./Navbar2";
+import Navbar from "./Navbar";
 //import { register } from "../actions/auth";
 class AddOrder extends Component {
 
@@ -45,7 +45,7 @@ class AddOrder extends Component {
 
         // step 5
 
-        orderService.saveOrder(order).then(res => {         
+        OrderService.saveOrder(order).then(res => {         
             //const order=this.state.order;
             //const order_id=order.id;   
             
